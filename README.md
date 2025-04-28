@@ -1,23 +1,48 @@
-Features:
-* Real-time WebSocket server broadcasting racer positions.
+# Real-Time Race Tracker 🏁
 
-* Dynamic leaderboard updating every second.
+A lightweight real-time multiplayer race tracker built with Node.js, WebSocket, and vanilla JavaScript.  
+Simulates live racing events, updating racer positions and leaderboard rankings every second.
 
-* Simulated racers with randomized speed profiles.
+---
 
-* Responsive frontend built with plain HTML, CSS, and JavaScript.
+## 🚀 Features
 
-* Handles multiple connected clients simultaneously.
+- Real-time WebSocket server broadcasting racer positions.
+- Dynamic leaderboard updating every second.
+- Simulated racers with randomized speed profiles.
+- Responsive frontend built with plain HTML, CSS, and JavaScript.
+- Handles multiple connected clients simultaneously.
 
-1. Clone the Repository:
-   * git clone https://github.com/your-username/real-time-race-tracker.git
-   * cd real-time-race-tracker
+---
 
-2. Setup the Backend:
-   * cd backend
-   * npm install
-   * node server.js
-   * Server will start on http://localhost:3000
+## 🛠️ Installation and Running
 
-3. Open the Frontend:
-   * Open frontend/index.html directly in the browser
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/real-time-race-tracker.git
+cd real-time-race-tracker
+
+
+### 2. Setup the Backend
+cd backend
+npm install
+node server.js
+
+
+### 3. Setup the Frontend
+Open frontend/index.html directly in your web browser.
+
+
+### Project Structure:
+real-time-race-tracker/
+├── backend/
+│   ├── server.js
+│   ├── package.json
+├── frontend/
+│   ├── index.html
+│   ├── main.js
+│   ├── styles.css
+├── README.md
+├── .gitignore
+```

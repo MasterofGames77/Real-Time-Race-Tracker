@@ -11,4 +11,29 @@ body {
 .racer {
   margin: 10px 0;
   font-size: 20px;
+
+  /* NEW: Fade animation */
+  opacity: 0;
+  animation: fadeIn 0.7s ease-in forwards;
+}
+
+/* NEW: Make text smaller on small screens */
+@media (max-width: 600px) {
+  .racer {
+    font-size: 16px;
+  }
+}
+
+/* NEW: Adjust body margin for smaller devices */
+@media (max-width: 400px) {
+  body {
+    margin-top: 20px;
+  }
+}
+
+/* NEW: Define fadeIn keyframes */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }

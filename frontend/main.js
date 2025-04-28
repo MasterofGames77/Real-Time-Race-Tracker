@@ -1,5 +1,9 @@
 const socket = new WebSocket('ws://localhost:3000');
 
+// Define a set of avatars to use
+const avatars = ['🚴‍♂️', '🚴‍♀️', '🚵‍♂️', '🚵‍♀️', '🏍️', '🏎️'];
+const medalColors = ['gold', 'silver', '#cd7f32'];
+
 // Listen for messages from the server
 socket.addEventListener('message', (event) => {
     const racers = JSON.parse(event.data);
@@ -25,15 +29,19 @@ function updateLeaderboard(racers) {
     racers.forEach((racer, index) => {
         const racerDiv = document.createElement('div');
         racerDiv.className = 'racer';
-        racerDiv.textContent = `${index + 1}. ${racer.name} - Distance: ${racer.distance.toFixed(2)} - Speed: ${racer.speed.toFixed(2)} u/s`;
+
+        // Attach an avatar based on racer ID
+        const avatar = avatars[racer.id % avatars.length];
+
+        racerDiv.textContent = `${avatar} ${index + 1}. ${racer.name} - Distance: ${racer.distance.toFixed(2)} - Speed: ${racer.speed.toFixed(2)} u/s`;
 
         // Add colors for top 3 racers
         if (index === 0) {
-            racerDiv.style.color = 'gold';
+            racerDiv.style.color = medalColors[index];
         } else if (index === 1) {
-            racerDiv.style.color = 'silver';
+            racerDiv.style.color = medalColors[index];
         } else if (index === 2) {
-            racerDiv.style.color = 'bronze';
+            racerDiv.style.color = medalColors[index];
         }
 
         leaderboardDiv.appendChild(racerDiv);
