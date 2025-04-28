@@ -23,18 +23,21 @@ Simulates live racing events, updating racer positions and leaderboard rankings 
 git clone https://github.com/your-username/real-time-race-tracker.git
 cd real-time-race-tracker
 
-
+```
 ### 2. Setup the Backend
+```bash
 cd backend
 npm install
 node server.js
 
-
+```
 ### 3. Setup the Frontend
+```bash
 Open frontend/index.html directly in your web browser.
 
-
+```
 ### Project Structure:
+```bash
 real-time-race-tracker/
 ├── backend/
 │   ├── server.js
