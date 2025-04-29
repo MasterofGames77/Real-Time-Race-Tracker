@@ -13,8 +13,8 @@ body {
   font-size: 20px;
 
   /* NEW: Fade animation */
-  opacity: 0;
-  animation: fadeIn 0.7s ease-in forwards;
+  /* opacity: 0;
+  animation: fadeIn 0.7s ease-in forwards; */
 }
 
 /* NEW: Make text smaller on small screens */
@@ -36,4 +36,26 @@ body {
   to {
     opacity: 1;
   }
+}
+
+.race-finished-banner {
+  font-size: 28px;
+  font-weight: bold;
+  color: green;
+  margin: 20px 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.podium {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  color: darkblue;
+  animation: fadeIn 1s ease-in forwards;
 }
